@@ -1,0 +1,26 @@
+#Programa para calcular el precio de un producto
+
+#Ingreso de Datos
+nombreProd = input("Ingrese el nombre del producto: ")
+cantCosto = float(input("Ingrese el costo del producto: "))
+porcentUtilidad = float(input("Ingrese el porcentaje de utilidad: "))
+exonerado = input("¿Está este producto exonerado del impuesto a la renta? S/N: ")
+
+#Proceso de datos
+cantGanancia = (cantCosto * porcentUtilidad) / 100
+
+if (exonerado == "S"):
+  impuesto = 0
+else:
+  impuesto = (cantCosto + cantGanancia) * 0.02
+
+precioVenta = cantCosto + cantGanancia + impuesto
+
+#Salida(Impresión)
+print()
+print("Producto        : " + nombreProd)
+print("Precio de Costo : S/. " + str(cantCosto))
+print("Ganancia        : S/. " + str(cantGanancia))
+print("Impuesto        : S/. " + str(impuesto))
+print("Precio Venta    : S/. " + str(precioVenta))
+
